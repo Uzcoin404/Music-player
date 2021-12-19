@@ -73,7 +73,7 @@ function musicPlayer() {
     function musicDetails() {
         audio.src = musicList[musicIndex].src;
         musicImg.src = musicList[musicIndex].img;
-        root.style.setProperty('--background', `url('${musicList[musicIndex].img}')`);
+        root.style.setProperty('--background', `url('../${musicList[musicIndex].img}')`);
         artistName.innerHTML = musicList[musicIndex].artist;
         musicName.innerHTML = musicList[musicIndex].name;
         musicList[musicIndex].love ? isLove = true : isLove = false;
