@@ -1,0 +1,50 @@
+:root {
+    --color: #ff1040;
+    --background: url('');
+}
+.cGreen, .cGreen .colors_tooltip{
+    background: #00a800;
+}
+.cBlack, .cBlack .colors_tooltip{
+    background: #161616;
+}
+.cDblue, .cDblue .colors_tooltip{
+    background: #222c3f;
+}
+.cPurple, .cPurple .colors_tooltip{
+    background: #b100b1;
+}
+.cBlue, .cBlue .colors_tooltip{
+    background: #0044ff;
+}
+.cCrimson, .cCrimson .colors_tooltip{
+    background: #ff1846;
+}
+.cAqua, .cAqua .colors_tooltip{
+    background: #00bac0;
+}
+.cOrange, .cOrange .colors_tooltip{
+    background: #ff9100;
+}
+/* color controls colors */
+main{
+    background: var(--background) no-repeat center / cover;
+}
+.btn:hover, .play_icon, .audio_playAgain.active, .settings_item i, .music_list_title i, .close_icon, .list_music_artist i, .music_number, .list_music_time{
+    color: var(--color);
+}
+::-webkit-scrollbar-thumb, .lds-ellipsis div, .musicPlayer, #speed_minus, #speed_plus, .speed_indi, .play_icon:hover, .settings_item:hover, .audio_range::-webkit-slider-thumb, .controlIndicator, .volume_thumb, .volume_bar, .progress_bar, .thumb, .list_musics li:hover, .list_musics li.playing, .vertical{
+    background: var(--color);
+}
+.musicPlayer .color_blog, #horizontal{
+    border-color: var(--color);
+}
+.far.fa-repeat.playlist::before{
+    content: '\f363';
+}
+.far.fa-repeat.looped::before{
+    content: '\f366';
+}
+.far.fa-repeat.random::before{
+    content: '\f074';
+}

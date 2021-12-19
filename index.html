@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio player</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="icon" href="img/logo.png">
+</head>
+<body>
+    <div class="loader">
+        <div class="loadingio-spinner-eclipse-xytvyjqcqv"><div class="ldio-afv85533t5d">
+        <div></div>
+        </div></div>
+    </div>
+    <main class="main">
+        <div class="musicPlayer">
+            <div class="musicPlayer_body">
+                <div class="musicPlayer_header">
+                    <h2 class="music_title"><i class="fas fa-music-alt"></i> <span class="artist_name">TheFatRat</span> - <span class="music_name">Rise up</span></h2>
+                    <div class="audio_settings">
+                        <div class="btn settings_icon"><i class="fas fa-ellipsis-v"></i></div>
+                        <div class="settings_content">
+                            <a href="audio/TheFatRat-Rise_Up.mp3" download class="settings_item audio_download">Download <i class="fas fa-download"></i></a>
+                            <a href="#" class="settings_item audio_share">Share <i class="fas fa-share-square"></i></a>
+                            <p class="settings_item shortcuts_icon">Shortcuts <i class="fas fa-info"></i></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="musicPlayer_main">
+                    <img src="img/Rise_up.png" alt="" class="music_img">
+                    <div class="controlIndicator">You loved this music</div>
+                </div>
+                <div class="musicPlayer_footer">
+                    <div class="audio_functions">
+                        <div class="volume">
+                            <div class="btn volume_icon" title="Change Volume"><i class="fas fa-volume-up" id="volume_icon"></i></div>
+                            <div class="volume_item">
+                                <div class="volume_slider">
+                                    <div class="volume_thumb"><span></span></div>
+                                    <input class="volume_range" type="range" name="volume_range" min="0" max="100" id="volume_range">
+                                    <div class="volume_bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="love">
+                            <div class="btn love_icon" title="You don't love this music"><i class="fas fa-heart" id="heart_icon"></i></div>
+                            <div class="love_item">
+                                <p class="love_text">Like this music</p>
+                            </div>
+                        </div>
+                        <div class="audio_color">
+                            <div class="btn color_icon" title="Change colors"><i class="fas fa-palette" id="color_icon"></i></div>
+                            <div class="color_item">
+                                <div class="color_blog">
+                                    <p class="color_picker_text">Custom color</p>
+                                    <input type="color" class="color_picker" name="color_picker">
+                                </div>
+                                <p class="color_text">Most used colors</p>
+                                <div class="colors_content">
+                                    <div class="colors cGreen"><p class="colors_tooltip">Green</p></div>
+                                    <div class="colors cBlack"><p class="colors_tooltip">Black</p></div>
+                                    <div class="colors cDblue"><p class="colors_tooltip">Dark blue</p></div>
+                                    <div class="colors cPurple"><p class="colors_tooltip">Purple</p></div>
+                                    <div class="colors_content_item">
+                                        <div class="colors cBlue"><p class="colors_tooltip">Blue</p></div>
+                                        <div class="colors cCrimson"><p class="colors_tooltip">Crimson</p></div>
+                                        <div class="colors cAqua"><p class="colors_tooltip">Aqua</p></div>
+                                        <div class="colors cOrange"><p class="colors_tooltip">Orange</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="speed">
+                            <div class="btn speed_icon" title="Music speed"><i class="fas fa-tachometer-alt" id="speed_icon">
+                            </i></div>
+                            <div class="speed_item">
+                                <p class="speed_text">Playback speed: </p>
+                                <div class="speed_control">
+                                    <i class="fas fa-angle-left" id="speed_minus"></i>
+                                    <span class="speed_indi">1</span>
+                                    <i class="fas fa-angle-right" id="speed_plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="audio_bartime">
+                        <span class="audio_time audio_spendTime">00:00</span>
+                        <div class="audio_progress">
+                            <div class="slider_bar">
+                                <div class="thumb"><span></span></div>
+                                <div class="progress_bar"></div>
+                                <input class="audio_range" type="range" name="audio_range" min="0" max="100" value="0" id="audio_range">
+                            </div>
+                        </div>
+                        <span class="audio_time audio_remainingTime">00:00</span>
+                    </div>
+                    <div class="audio_controls">  
+                        <div class="btn anm_btn audio_playAgain" title="Playlist looped"><i class="far fa-repeat playlist" id="loop_icon"></i></div>
+                        <div class="btn anm_btn audio_backward"><i class="fas fa-backward"></i></div>
+                        <div class="btn anm_btn play_icon"><i class="fas fa-play" id="play_icon"></i></div>
+                        <div class="btn anm_btn audio_forward"><i class="fas fa-forward"></i></div>
+                        <div class="btn anm_btn audio_list_icon" title="Playlist"><i class="fas fa-list-music"></i></div>
+                    </div>
+                </div>
+                <div class="music_list">
+                    <div class="music_list_header">
+                        <h2 class="music_list_title"><i class="fas fa-list-music"></i> Music list</h2>
+                        <div class="close_icon"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="music_list_main">
+                        <ul class="list_musics"></ul>
+                    </div>
+                </div>
+                <div class="shortcuts">
+                    <h3 class="shortcuts_title">Player shortcuts</h3>
+                    <ul class="shortcuts_list">
+                        <li class="shortcut"><mark>Space</mark> <i class="fas fa-long-arrow-alt-right" id="shortcuts_text"></i> Play or pause</li>
+                        <li class="shortcut"><mark><i class="fas fa-chevron-left"></i></mark> <i class="fas fa-long-arrow-alt-right" id="shortcuts_text"></i> Previous music</li>
+                        <li class="shortcut"><mark><i class="fas fa-chevron-right"></i></mark> <i class="fas fa-long-arrow-alt-right" id="shortcuts_text"></i> Next music</li>
+                        <li class="shortcut"><mark>P</mark> <i class="fas fa-long-arrow-alt-right" id="shortcuts_text"></i> Open playlist</li>
+                        <li class="shortcut"><mark>V</mark> <i class="fas fa-long-arrow-alt-right" id="shortcuts_text"></i> Mute volume</li>
+                        <li class="shortcut"><mark>L</mark> <i class="fas fa-long-arrow-alt-right" id="shortcuts_text"></i> Like current Music</li>
+                        <li class="shortcut"><mark>D</mark> <i class="fas fa-long-arrow-alt-right" id="shortcuts_text"></i> Download current Music</li>
+                        <li class="shortcut"><mark>Ctr</mark> + <mark>Alt</mark> + <mark>M</mark> <i class="fas fa-long-arrow-alt-right" id="shortcuts_text"></i> Reduce Playback speed 0.5x</li>
+                        <li class="shortcut"><mark>Ctr</mark> + <mark>Alt</mark> + <mark>P</mark> <i class="fas fa-long-arrow-alt-right" id="shortcuts_text"></i> Increase Playback speed 0.5x</li>
+                        <li class="shortcut"><mark>I</mark> <i class="fas fa-long-arrow-alt-right" id="shortcuts_text"></i> Open Shortcuts</li>
+                    </ul>
+                    </ul>
+                </div>
+            </div>
+            <audio src="audio/TheFatRat-Rise_Up.mp3" class="audio" hidden></audio>
+        </div>
+        <div class="equalizer">
+            <div id="equalizer">
+                <div id="horizontal"></div>
+                <div id="vertical-lines">
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                    <div class="vertical"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/music_list.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
