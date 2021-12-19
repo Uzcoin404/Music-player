@@ -1,7 +1,13 @@
 const loader = document.querySelector('.loader');
+const vLines = document.querySelector('#vertical-lines');
 window.addEventListener('load', function(){
     loader.style.display = 'none';
 });
+let vLength = screen.width > 1366 ? 150 : screen.width > 768 ? 90 : 40;
+for (let i = 0; i < vLength; i++) {
+    let vLine = `<div class="vertical"></div>`;
+    vLines.insertAdjacentHTML('beforeend', vLine);
+}
 const main = document.querySelector('main');
 const audio = document.querySelector('.audio');
 const play = document.querySelector('.play_icon');
@@ -39,26 +45,25 @@ function musicPlayer() {
     let isDown = false;
     let isLove = false;
     let audioCurrentTime = 0;
-    const musicPlayer = document.querySelector('.musicPlayer');
-    const audioList = document.querySelector('.music_list');
-    const audioForward = document.querySelector('.audio_forward');
-    const audioBackward = document.querySelector('.audio_backward');
-    const audioListIcon = document.querySelector('.audio_list_icon');
-    const listMusics = document.querySelector('.list_musics');
-    const allLi = listMusics.querySelectorAll('li');
-    const musicImg = document.querySelector('.music_img');
-    const musicName = document.querySelector('.music_name');
-    const artistName = document.querySelector('.artist_name');
-    const controlIndicator = document.querySelector('.controlIndicator');
-    const settingsItem = document.querySelector('.settings_item');
-    const btn = document.querySelectorAll('.anm_btn');
-    const audioSpendTime = document.querySelector('.audio_spendTime');
-    const audioRemainingTime = document.querySelector('.audio_remainingTime');
-    const playAgain = document.querySelector('.audio_playAgain');
-    const progressBar = document.querySelector('.progress_bar');
-    const thumb = document.querySelector('.thumb');
-    const love = document.querySelector('.love_icon');
-    const daysToExpire = new Date(2147483647 * 1000).toUTCString();
+    const musicPlayer = document.querySelector('.musicPlayer'),
+          audioList = document.querySelector('.music_list'),
+          audioForward = document.querySelector('.audio_forward'),
+          audioBackward = document.querySelector('.audio_backward'),
+          audioListIcon = document.querySelector('.audio_list_icon'),
+          listMusics = document.querySelector('.list_musics'),
+          musicImg = document.querySelector('.music_img'),
+          musicName = document.querySelector('.music_name'),
+          artistName = document.querySelector('.artist_name'),
+          controlIndicator = document.querySelector('.controlIndicator'),
+          settingsItem = document.querySelector('.settings_item'),
+          btn = document.querySelectorAll('.anm_btn'),
+          audioSpendTime = document.querySelector('.audio_spendTime'),
+          audioRemainingTime = document.querySelector('.audio_remainingTime'),
+          playAgain = document.querySelector('.audio_playAgain'),
+          progressBar = document.querySelector('.progress_bar'),
+          thumb = document.querySelector('.thumb'),
+          love = document.querySelector('.love_icon'),
+          daysToExpire = new Date(2147483647 * 1000).toUTCString();
     if (checkCookie('music-index')) {
         audio.src = getCookie('music-path');
         musicImg.src = getCookie('music-img');
@@ -73,7 +78,7 @@ function musicPlayer() {
     function musicDetails() {
         audio.src = musicList[musicIndex].src;
         musicImg.src = musicList[musicIndex].img;
-        root.style.setProperty('--background', `url('../${musicList[musicIndex].img}')`);
+        document.querySelector('.background').src = musicList[musicIndex].img;
         artistName.innerHTML = musicList[musicIndex].artist;
         musicName.innerHTML = musicList[musicIndex].name;
         musicList[musicIndex].love ? isLove = true : isLove = false;
@@ -110,12 +115,12 @@ function musicPlayer() {
             musicListTime.innerHTML = `${audioDurationMin < 10 ? "0" + audioDurationMin : audioDurationMin}:${audioDurationSec < 10 ? "0" + audioDurationSec : audioDurationSec}`;
         });
     }
+    const allLi = listMusics.querySelectorAll('li');
     function removePlaying() {
         for (let i = 0; i < allLi.length; i++) {
             allLi[i].classList.remove('playing');
         }
     }
-    console.log(allLi);
     for (let j = 0; j < allLi.length; j++) {
         let musicNumber = allLi[j].getAttribute('music-index');
         allLi[j].addEventListener('click', function(){
@@ -335,17 +340,17 @@ function musicPlayer() {
         }
     });
     // Audio functions
-    const shortcuts = document.querySelector('.shortcuts');
-    const volumeIcon = document.querySelector('.volume_icon');
-    const volumeRange = document.querySelector('.volume_range');
-    const volumeThumb = document.querySelector('.volume_thumb');
-    const volumeBar = document.querySelector('.volume_bar');
-    const speedPlus = document.querySelector('#speed_plus');
-    const speedMinus = document.querySelector('#speed_minus');
-    const speedIndi = document.querySelector('.speed_indi');
-    const colorIcon = document.querySelector('.color_icon');
-    const colors = document.querySelectorAll('.colors');
-    const colorPicker = document.querySelector('.color_picker');
+    const shortcuts = document.querySelector('.shortcuts'),
+          volumeIcon = document.querySelector('.volume_icon'),
+          volumeRange = document.querySelector('.volume_range'),
+          volumeThumb = document.querySelector('.volume_thumb'),
+          volumeBar = document.querySelector('.volume_bar'),
+          speedPlus = document.querySelector('#speed_plus'),
+          speedMinus = document.querySelector('#speed_minus'),
+          speedIndi = document.querySelector('.speed_indi'),
+          colorIcon = document.querySelector('.color_icon'),
+          colors = document.querySelectorAll('.colors'),
+          colorPicker = document.querySelector('.color_picker');
     audio.volume = 0.5;
     let audioVolume = 0.50;
     // audio volume

@@ -27,8 +27,13 @@
     background: #ff9100;
 }
 /* color controls colors */
-main{
-    background: var(--background) no-repeat center / cover;
+.background{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(2px);
 }
 .btn:hover, .play_icon, .audio_playAgain.active, .settings_item i, .music_list_title i, .close_icon, .list_music_artist i, .music_number, .list_music_time{
     color: var(--color);
