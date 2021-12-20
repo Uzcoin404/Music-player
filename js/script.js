@@ -410,22 +410,20 @@ function musicPlayer() {
         musicLove();
     });
     volumeIcon.addEventListener('click', function(){
-        if (screen.width > 576) {     
-            this.classList.toggle('active');
-            if (this.classList.contains('active')) {
-                this.classList.add('active');
-                audio.volume = 0;
-                volumeRange.value = 0;
-                volumeSlider();
-                controlIndicator.innerHTML = `Music muted`;
-                musicPlayer.classList.add('indi');
-                musicLove();
-            } else{
-                this.classList.remove('active');
-                audio.volume = audioVolume;
-                volumeRange.value = audioVolume * 100;
-                volumeSlider();
-            }
+        this.classList.toggle('active');
+        if (this.classList.contains('active')) {
+            this.classList.add('active');
+            audio.volume = 0;
+            volumeRange.value = 0;
+            volumeSlider();
+            controlIndicator.innerHTML = `Music muted`;
+            musicPlayer.classList.add('indi');
+            musicLove();
+        } else{
+            this.classList.remove('active');
+            audio.volume = audioVolume;
+            volumeRange.value = audioVolume * 100;
+            volumeSlider();
         }
     });
     function volumeController(plusOrMinus) {
