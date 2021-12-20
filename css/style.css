@@ -92,15 +92,15 @@ main {
   z-index: 99;
 }
 .music_title {
+  width: 275px;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   padding-right: 8px;
   color: #ddd;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  display: -webkit-box;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 .audio_settings {
   position: relative;
@@ -744,6 +744,9 @@ main {
     border-radius: 50%;
     box-shadow: 0 10px 0 0 #0069ff;
     transform-origin: 160px 165.6px;
+  }
+  .volume_item{
+    display: none;
   }
 }
 @media (max-width: 375px) {
