@@ -35,7 +35,7 @@
     object-fit: cover;
     filter: blur(2px);
 }
-.btn:hover, .play_icon, .audio_playAgain.active, .settings_item i, .music_list_title i, .close_icon, .list_music_artist i, .music_number, .list_music_time{
+.btn:hover, .play_icon, .audio_playAgain.active, .settings_item i, .music_list_title i, .close_icon, .list_music_artist i, .music_number, .list_music_time, .creator_info a{
     color: var(--color);
 }
 ::-webkit-scrollbar-thumb, .lds-ellipsis div, .musicPlayer, #speed_minus, #speed_plus, .speed_indi, .play_icon:hover, .settings_item:hover, .audio_range::-webkit-slider-thumb, .controlIndicator, .volume_thumb, .volume_bar, .progress_bar, .thumb, .list_musics li:hover, .list_musics li.playing, .vertical{

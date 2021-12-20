@@ -735,6 +735,29 @@ main {
     height: 5px;
   }
 }
+.creator_info{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-weight: 600;
+  color: #000;
+  z-index: 9;
+}
+.creator_info a{
+  font-weight: 700;
+  transition: .3s ease;
+}
+.creator_info a:hover{
+  text-decoration: underline;
+  color: #ff1846;
+}
+.creator_info i{
+  color: #ff1846;
+  transition: .4s;
+}
+.creator_info i:hover{
+  transform: scale(1.25);
+}
 
 @media (max-width: 576px) {
   .ldio-afv85533t5d div {
