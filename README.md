@@ -3,18 +3,18 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/github/languages/top/uzcoin404/TeamWork?style=flat" />
-    <img src="https://img.shields.io/github/repo-size/uzcoin404/TeamWork?style=flat" />
-    <img src="https://img.shields.io/github/downloads/uzcoin404/TeamWork/total" />
-    <img src="https://img.shields.io/github/languages/count/uzcoin404/TeamWork?style=flat" />
+    <img src="https://img.shields.io/github/languages/top/uzcoin404/Music-player?style=flat" />
+    <img src="https://img.shields.io/github/repo-size/uzcoin404/Music-player?style=flat" />
+    <img src="https://img.shields.io/github/downloads/uzcoin404/Music-player/total" />
+    <img src="https://img.shields.io/github/languages/count/uzcoin404/Music-player?style=flat" />
     <img src="https://img.shields.io/badge/-HTML-orange?style=flat" />
     <img src="https://img.shields.io/badge/-CSS-blue?style=flat">
     <img src="https://img.shields.io/badge/-JavaScript-yellow?style=flat">
-    <img src="https://img.shields.io/github/issues/uzcoin404/TeamWork?style=flat" />
-    <img src="https://img.shields.io/github/issues-pr/uzcoin404/TeamWork?style=flat" />
-    <img src="https://img.shields.io/github/commit-activity/w/uzcoin404/TeamWork?style=flat" />
-    <img src="https://img.shields.io/github/contributors/uzcoin404/TeamWork?style=flat" />
-    <img src="https://img.shields.io/github/discussions/uzcoin404/TeamWork?style=flat" />
+    <img src="https://img.shields.io/github/issues/uzcoin404/Music-player?style=flat" />
+    <img src="https://img.shields.io/github/issues-pr/uzcoin404/Music-player?style=flat" />
+    <img src="https://img.shields.io/github/commit-activity/w/uzcoin404/Music-player?style=flat" />
+    <img src="https://img.shields.io/github/contributors/uzcoin404/Music-player?style=flat" />
+    <img src="https://img.shields.io/github/discussions/uzcoin404/Music-player?style=flat" />
     <img src="https://img.shields.io/badge/Star-Please%20Star%20it-green?style=flat" />
 </p>
 
